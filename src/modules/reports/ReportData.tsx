@@ -1,11 +1,11 @@
 // import { Layout } from "antd";
 // import { Header, Content, Footer} from 'antd/es/layout/layout'
 
-function OrderData() {
+function ReportData() {
     return(
-        <div>OrderData</div>
+        <div>ReportData</div>
 
     )
 }
 
-export default OrderData;
+export default ReportData;

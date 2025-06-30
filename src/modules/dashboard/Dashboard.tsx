@@ -3,19 +3,19 @@ import { Header, Content, Footer } from 'antd/es/layout/layout';
 import Sider from 'antd/es/layout/Sider';
 import React from 'react';
 import { Outlet } from 'react-router-dom';
-import MenuDynamic from './MenuDynamic';
+import MenuComponents from '../MenuComponent';
 
 
 function Dashboard() {
     return (
         <Layout style={{ minHeight: '100vh' }}>
             <Sider width= {220}>
-                <MenuDynamic/>
+                <MenuComponents/>
             </Sider>
 
             <Layout>
-                <Header/>
-                <Content style={{ margin : '24px 16px 0', padding: 24, background: '#fff', minHeight: 280 }}>
+                <Header style={{ padding: 0 }} />
+                <Content style={{ margin : '24px 16px 0', padding: 24, background: '#fff' }}>
                     <Outlet/>
                 </Content>
                 <Footer/>

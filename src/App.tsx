@@ -1,34 +1,32 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
-
-import UserForm from './modules/user/UserForm'
-import { BrowserRouter as Router, Routes, Route, Link, BrowserRouter } from 'react-router-dom'
-import MenuComponent from './modules/MenuComponent'
+import { BrowserRouter, Routes, Route} from 'react-router-dom'
 import Dashboard from './modules/dashboard/Dashboard'
 import routes from './core/menuRoutes'
+import AuthRoutes from './auth/AuthRoutes'
+import LoginForm from './modules/user/Login'
 
-
+// Este archivo de app.tsx es el punto de entrada de la aplicación React.
+//se creo una ruta publica, para despues generar una para englobar todas las rutas privadas, y que verifque si existe un token de autenticación.
 function App() {
-  const [count, setCount] = useState(0)
 
-  const handlerClick = () => {
-    setCount((count) => count + 1)
-  }
-  
   return (
-    <>
-    <BrowserRouter>
+    <BrowserRouter> 
       <Routes>
-        <Route path = "/" element={<Dashboard />}>
+        <Route path = '/login' element={<LoginForm/>} />
+        <Route path = '/' 
+        element ={
+          <AuthRoutes>
+            <Dashboard />
+          </AuthRoutes>
+          }
+        >
+
           {routes.map (route =>
             <Route key ={route.path} path={route.path} element={route.element} />
           )}
         </Route>
       </Routes>
     </BrowserRouter>
-    </>
   )
 }
 
