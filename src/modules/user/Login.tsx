@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useForm } from 'antd/es/form/Form';
 import { Form, Input, Button } from 'antd';
 import { useNavigate } from 'react-router-dom';
-import { useAuth } from '../../auth/AuthContext'; // Ajusta la ruta según tu estructura de carpetas
+import { useAuth } from '../auth/AuthContext'; // Ajusta la ruta según tu estructura de carpetas
 
 interface LoginData {
     email: string;

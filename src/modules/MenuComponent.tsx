@@ -2,7 +2,7 @@ import Icon, { DashboardOutlined, UserOutlined, BarChartOutlined, PieChartOutlin
 import { Menu } from "antd";
 import { useEffect, useState } from "react";
 import { useLocation, useNavigate} from "react-router-dom";
-import { useAuth } from "../auth/AuthContext";
+import { useAuth } from "./auth/AuthContext";
 
 const Icons = {
     PieChartOutlined,

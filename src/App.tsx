@@ -2,7 +2,7 @@ import './App.css'
 import { BrowserRouter, Routes, Route} from 'react-router-dom'
 import Dashboard from './modules/dashboard/Dashboard'
 import routes from './core/menuRoutes'
-import AuthRoutes from './auth/AuthRoutes'
+import AuthRoutes from './modules/auth/AuthRoutes'
 import LoginForm from './modules/user/Login'
 
 // Este archivo de app.tsx es el punto de entrada de la aplicación React.
